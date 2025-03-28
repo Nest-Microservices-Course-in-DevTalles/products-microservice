@@ -1,0 +1,6 @@
+1. Para usar microservices, necesitamos instalarlo primero:
+yarn add @nestjs/microservices
+
+Usando MessagePattern
+2. Se debe agregar en el controlador como un decorador
+@MessagePattern
