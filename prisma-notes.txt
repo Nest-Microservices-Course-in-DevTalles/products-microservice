@@ -11,7 +11,7 @@ yarn prisma init
 4. Migrar el modelo a la bd -> esto generará la BD dev.db:
 yarn prisma migrate dev --name init
 
-5. Instalar el Prisma client -> esto es lo que nos permite trabajar con prism (queries):
+5. Instalar el Prisma client -> esto es lo que nos permite trabajar con prisma (queries):
 yarn add @prisma/client
 
 6. Si se agrega algún campo adicional, no olvidar ejecutar la migración -> ejemplo agregando el campo available:

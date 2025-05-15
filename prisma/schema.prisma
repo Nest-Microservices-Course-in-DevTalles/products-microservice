@@ -24,6 +24,6 @@ model Product {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  // Creando indice
+  // Creando indice -> para búsquedas más rápidas
   @@index([available])
 }

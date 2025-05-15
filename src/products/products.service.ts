@@ -55,7 +55,7 @@ export class ProductsService extends PrismaClient implements OnModuleInit {
   }
 
   async update(id: number, updateProductDto: UpdateProductDto) {
-    const { id: __, ...data } = updateProductDto;
+    const { id: __, ...data } = updateProductDto; // Haciendo esto para asegurarnos de no enviar el id en el update
 
     await this.findOne(id)
 

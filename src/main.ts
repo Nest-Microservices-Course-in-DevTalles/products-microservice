@@ -10,8 +10,8 @@ async function bootstrap() {
   // const app = await NestFactory.create(AppModule);
   const app = await NestFactory.createMicroservice<MicroserviceOptions>(
     AppModule,
-    {
-      transport: Transport.TCP,
+    {// configuraciones del microservicio
+      transport: Transport.TCP, // para no usarlo con el transporte HTTP
       options: {
         port: envs.port
       }
@@ -25,7 +25,11 @@ async function bootstrap() {
     }),
   );
 
+  // await app.listen( envs.port ); // Esto ya no funcionaría, porque el puerto ya fue definido mas arriba
   await app.listen();
+
+  // app.startAllMicroservices(); // Esto sería si quisieramos que funcione como híbrido (HTTP + TCP)
+
   logger.log(`Products Microservice running on port ${envs.port}`);
 }
 bootstrap();

@@ -11,7 +11,7 @@ const envsSchema = joi.object({
   PORT: joi.number().required(),
   DATABASE_URL: joi.string().required(),
 })
-.unknown(true)
+.unknown(true) // por otras variables que andan flotando o vienen por defecto
 
 const { error, value } = envsSchema.validate(process.env);
 
